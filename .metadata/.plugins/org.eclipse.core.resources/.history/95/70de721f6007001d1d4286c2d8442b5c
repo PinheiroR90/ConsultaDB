@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedDev</title>
+</head>
+<body>
+<script>
+
+function propertiesService(filter){
+	$.ajax({
+		type: "GET",
+		url: "api/find"+filtro,
+		data: "json",
+		success: function(data){
+			var total;
+			$.each(data,function(d,results){
+				$("#propTable tbody").append(
+					"<tr>"
+					+"<td class=\"text-nowrap\">"
+					+ results.category
+					+"</td>"+"<td class=\"text-nowrap\">"
+					+ results.subcategory
+					+"</td>"+ "<td class=\"text-nowrap\">"
+					+results.name
+					+"</td>"+ "<td class=\"text-nowrap\">"
+					+results.value
+					+"</td>"+ "<td class=\"text-nowrap\">"
+					+results.description
+					+"</td>"
+					+"</tr>"
+				)
+				total++;
+			})
+			$("#results").text(total+" found");
+		}
+	})
+}
+       
+</script>
+</body>
+</html>

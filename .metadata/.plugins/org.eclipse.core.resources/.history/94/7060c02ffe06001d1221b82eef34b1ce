@@ -1,0 +1,5 @@
+package com.pinheiro.livro.entities;
+
+public class Propriedade {
+
+}

@@ -1,0 +1,56 @@
+package com.pinheiro.livro.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
+public class Propriedade {
+	
+	@Id
+	private String name; 
+	private String value;
+	private String description;
+	private String category;
+	private String subCategory;
+	
+	
+	public Propriedade() {
+	}
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getValue() {
+		return value;
+	}
+	public void setValue(String value) {
+		this.value = value;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getCategories() {
+		return category;
+	}
+	public void setCategories(String categories) {
+		this.category = categories;
+	}
+	public String getSubCategories() {
+		return subCategory;
+	}
+	public void setSubCategories(String subCategories) {
+		this.subCategory = subCategories;
+	}
+	
+	
+
+}

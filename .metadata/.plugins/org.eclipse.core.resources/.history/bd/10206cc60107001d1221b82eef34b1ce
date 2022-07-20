@@ -1,0 +1,14 @@
+package com.pinheiro.livro.repositories;
+
+import java.util.List;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+
+import com.pinheiro.livro.entities.Propriedade;
+
+public interface PropriedadeRepository extends PagingAndSortingRepository<Propriedade,String> {
+	
+
+	public List<Propriedade> findByFiltro(@Param("filtro")  String filtro);
+}
